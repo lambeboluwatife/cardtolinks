@@ -8,7 +8,7 @@ const HeaderDropdown = () => {
   return (
     <div className="relative">
       <div
-        className="flex flex-row items-center justify-between cursor-pointer bg-gray-100 p-2 rounded-lg"
+        className="flex flex-row items-center justify-between cursor-pointer p-2 rounded-lg"
         onClick={() => setOpen(!open)}
       >
         <div className="rounded-full bg-black h-7 w-7"></div>
