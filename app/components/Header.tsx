@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { GoHomeFill } from "react-icons/go";
-import { BsCardImage } from "react-icons/bs";
 import { IoVideocam } from "react-icons/io5";
-import { FaWandSparkles } from "react-icons/fa6";
+import { FaRegImage } from "react-icons/fa6";
+import { BiSolidMagicWand } from "react-icons/bi";
 import { GiPaintBrush } from "react-icons/gi";
 import { PiMarkerCircleLight } from "react-icons/pi";
 import { BsImages } from "react-icons/bs";
@@ -24,13 +24,13 @@ const Header = () => {
           <GoHomeFill size={20} />
         </div>
         <div className="p-3 rounded-xl hover:bg-white cursor-pointer">
-          <BsCardImage size={20} />
+          <FaRegImage size={20} />
         </div>
         <div className="p-3 rounded-xl hover:bg-white cursor-pointer">
           <IoVideocam size={20} />
         </div>
         <div className="p-3 rounded-xl hover:bg-white cursor-pointer">
-          <FaWandSparkles size={20} />
+          <BiSolidMagicWand size={20} />
         </div>
         <div className="p-3 rounded-xl hover:bg-white cursor-pointer">
           <GiPaintBrush size={20} />
