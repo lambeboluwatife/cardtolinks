@@ -1,13 +1,15 @@
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
+import Generate from "./components/Generate";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="h-screen w-full">
       <Header />
-      <div className="max-w-5xl w-full">
-        <Carousel />
-      </div>
+      {/* <Carousel /> */}
+      <Generate />
+      <Footer />
     </main>
   );
 }
