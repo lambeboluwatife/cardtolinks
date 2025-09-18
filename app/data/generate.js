@@ -81,7 +81,7 @@ export const generateData = [
     title: "Train",
     description: "Teach Krea to replicate your style, product, or characters.",
     icon: <GiEnlightenment size={20} className="text-white" />,
-    iconBackground: "bg-gradient-to-b from-black to-gray-200",
+    iconBackground: "bg-red-500",
     new: false,
   },
   {
