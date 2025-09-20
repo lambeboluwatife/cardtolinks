@@ -25,7 +25,7 @@ export const generateData = [
     title: "Image",
     description: "Generate images with custom styles in Flux and ideogram.",
     icon: <FaRegImage size={20} className="text-white" />,
-    iconBackground: "bg-gradient-to-b from-gray-800 to-white",
+    iconBackground: "bg-gradient-to-b from-gray-800 to-gray-400",
     new: true,
   },
   {
@@ -49,7 +49,7 @@ export const generateData = [
     title: "Enhancer",
     description: "Upscale and enhance images and videos up to 22K.",
     icon: <BiSolidMagicWand size={20} className="text-white" />,
-    iconBackground: "bg-gradient-to-b from-black to-gray-300",
+    iconBackground: "bg-gradient-to-b from-black to-gray-400",
     new: true,
   },
   {
