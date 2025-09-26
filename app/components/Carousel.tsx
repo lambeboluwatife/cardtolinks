@@ -72,64 +72,95 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Slides */}
-      <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
+    <div className="px-4 my-4">
+      <div className="relative w-full overflow-hidden flex gap-4 justify-between">
         {slides.map((slide, index) => (
           <div
+            className="relative w-full h-[400px] mb-4 overflow-hidden"
             key={slide.id}
             id={`slide-${index}`}
-            className="flex-shrink-0 w-full snap-center relative"
           >
-            <div className="relative w-full h-[400px]">
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                className="object-cover rounded-xl"
-              />
-              <div className="absolute inset-0 bg-black/40 rounded-xl flex flex-col justify-center items-start p-8 text-white">
-                <h2 className="text-3xl font-bold">{slide.title}</h2>
-                <p className="mt-2 max-w-lg">{slide.description}</p>
-                {slide.cta && (
-                  <button className="mt-4 bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200">
-                    {slide.cta}
-                  </button>
-                )}
-              </div>
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              width={100}
+              height={100}
+              className="object-cover w-full h-full rounded-xl"
+            />
+            <div className="absolute inset-0 bg-black/40 rounded-xl flex flex-col justify-center items-start p-8 text-white">
+              <h2 className="text-3xl font-bold">{slide.title}</h2>
+              <p className="mt-2 max-w-lg">{slide.description}</p>
+              {slide.cta && (
+                <button className="mt-4 bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200">
+                  {slide.cta}
+                </button>
+              )}
             </div>
           </div>
         ))}
       </div>
-
-      {/* Prev/Next Buttons */}
-      <div className="absolute top-1/2 right-4 flex flex-col space-y-2 -translate-y-1/2">
-        <button
-          onClick={handlePrev}
-          className="bg-white/80 hover:bg-white text-black rounded-full p-2 shadow"
-        >
-          ◀
-        </button>
-        <button
-          onClick={handleNext}
-          className="bg-white/80 hover:bg-white text-black rounded-full p-2 shadow"
-        >
-          ▶
-        </button>
-      </div>
-
-      {/* Dots */}
-      <div className="flex justify-center mt-4 space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`w-3 h-3 rounded-full ${
-              current === index ? "bg-black" : "bg-gray-400"
-            }`}
-            onClick={() => handleDotClick(index)}
-          />
-        ))}
-      </div>
     </div>
   );
+
+  // return (
+  //   <div className="relative w-full overflow-hidden px-4 my-6">
+  //     {/* Slides */}
+  //     <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
+  //       {slides.map((slide, index) => (
+  //         <div
+  //           key={slide.id}
+  //           id={`slide-${index}`}
+  //           className="flex-shrink-0 w-full snap-center relative"
+  //         >
+  //           <div className="relative w-full h-[400px]">
+  //             <Image
+  //               src={slide.image}
+  //               alt={slide.title}
+  //               fill
+  //               className="object-cover rounded-xl"
+  //             />
+  //             <div className="absolute inset-0 bg-black/40 rounded-xl flex flex-col justify-center items-start p-8 text-white">
+  //               <h2 className="text-3xl font-bold">{slide.title}</h2>
+  //               <p className="mt-2 max-w-lg">{slide.description}</p>
+  //               {slide.cta && (
+  //                 <button className="mt-4 bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200">
+  //                   {slide.cta}
+  //                 </button>
+  //               )}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       ))}
+  //     </div>
+
+  //     {/* Prev/Next Buttons */}
+  //     <div className="absolute top-1/2 right-4 flex flex-col space-y-2 -translate-y-1/2">
+  //       <button
+  //         onClick={handlePrev}
+  //         className="bg-white/80 hover:bg-white text-black rounded-full p-2 shadow"
+  //       >
+  //         ◀
+  //       </button>
+  //       <button
+  //         onClick={handleNext}
+  //         className="bg-white/80 hover:bg-white text-black rounded-full p-2 shadow"
+  //       >
+  //         ▶
+  //       </button>
+  //     </div>
+
+  //     {/* Dots */}
+  //     <div className="flex justify-center mt-4 space-x-2">
+  //       {slides.map((_, index) => (
+  //         <button
+  //           key={index}
+  //           className={`w-3 h-3 rounded-full ${
+  //             current === index ? "bg-black" : "bg-gray-400"
+  //           }`}
+  //           onClick={() => handleDotClick(index)}
+  //         />
+  //       ))}
+  //     </div>
+  //   </div>
+  // );
 }

@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground: #0a0a0a;
-    --background: #ededed;
+    --background: #ffffff;
   }
 }
 
@@ -23,4 +23,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.swiper-wrapper {
+  margin: 0 !important;
+}
+
+.swiper-slide {
+  margin: 0 !important;
 }

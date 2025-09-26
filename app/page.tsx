@@ -1,13 +1,14 @@
+// app/page.tsx (server component)
 import Header from "./components/Header";
-import Carousel from "./components/Carousel";
 import Generate from "./components/Generate";
 import Footer from "./components/Footer";
+import HeroClientWrapper from "./components/HeroClientWrapper";
 
 export default function Home() {
   return (
-    <main className="h-screen w-full">
+    <main className="w-full">
       <Header />
-      {/* <Carousel /> */}
+      <HeroClientWrapper />
       <Generate />
       <Footer />
     </main>
