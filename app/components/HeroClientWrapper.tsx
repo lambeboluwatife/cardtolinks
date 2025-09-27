@@ -4,57 +4,73 @@ import dynamic from "next/dynamic";
 
 const HeroSlider = dynamic(() => import("./HeroSlider"), { ssr: false });
 
-// const slides = [
-//   {
-//     image: "/makeup 1.webp",
-//     title: "WAN 2.2 Image generation",
-//     subtitle:
-//       "Generate complex images with the brand new and powerful WAN 2.2 model.",
-//     ctaText: "Try WAN 2.2",
-//   },
-//   {
-//     image: "/makeup 2.webp",
-//     title: "Open Source Model — FLUX.1",
-//     subtitle: "We're making the weights available to the community.",
-//     ctaText: "Read More",
-//   },
-//   {
-//     image: "/makeup 1.webp",
-//     title: "Krea Tools & Gallery",
-//     subtitle: "Curated models and gallery examples to explore.",
-//     ctaText: "Explore Gallery",
-//   },
-// ];
-
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop",
     title: "WAN 2.2",
     subtitle: "WAN 2.2 Image generation",
+    description:
+      "Generate complex images with the brand new and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic textures.",
     ctaText: "Try WAN 2.2",
-    ctaHref: "#"
+    ctaHref: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=1200&h=600&fit=crop",
-    title: "FLUX.1 Krea",
-    subtitle: "We're ready to live website to our FLUX1 Krea model talent. Evolve, Download and run our model weights, read the technical report, or generate art it in Krea Images",
+    image:
+      "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=1200&h=600&fit=crop",
+    title: "Open Source",
+    subtitle: "FLUX.1 Krea",
+    description:
+      "We're ready to live website to our FLUX1 Krea model talent. Evolve, Download and run our model weights, read the technical report, or generate art it in Krea Images",
     ctaText: "Open Source",
-    ctaHref: "#"
+    ctaHref: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=600&fit=crop",
     title: "AI Revolution",
-    subtitle: "The future of artificial intelligence is here with breakthrough models",
+    subtitle: "Transforming Tomorrow Today",
+    description:
+      "The future of artificial intelligence is here with breakthrough models",
     ctaText: "Learn More",
-    ctaHref: "#"
+    ctaHref: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop&sat=-100",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop&sat=-100",
     title: "Next Generation",
-    subtitle: "Pushing the boundaries of what's possible with AI technology",
+    subtitle: "Advanced AI Solutions",
+    description: "Pushing the boundaries of what's possible with AI technology",
     ctaText: "Get Started",
-    ctaHref: "#"
-  }
+    ctaHref: "#",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=1200&h=600&fit=crop",
+    title: "AI Research Lab",
+    subtitle: "Innovating for the Future",
+    description: "Join our community of researchers pushing AI boundaries",
+    ctaText: "Join Research",
+    ctaHref: "#",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=600&fit=crop",
+    title: "Machine Learning Hub",
+    subtitle: "Learn, Build, Deploy",
+    description: "Access our comprehensive ML resources and training materials",
+    ctaText: "Start Learning",
+    ctaHref: "#",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200&h=600&fit=crop",
+    title: "AI Ethics Initiative",
+    subtitle: "Responsible AI Development",
+    description: "Exploring responsible AI development and implementation",
+    ctaText: "Learn About Ethics",
+    ctaHref: "#",
+  },
 ];
 
 export default function HeroClientWrapper() {
