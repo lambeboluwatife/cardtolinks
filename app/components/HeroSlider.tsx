@@ -120,10 +120,10 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
           aria-roledescription="carousel"
         >
           <div
-            className="flex items-center gap-8"
+            className="flex items-center gap-4 sm:gap-6 md:gap-8"
             style={{
-              paddingLeft: "2vw",
-              paddingRight: "10vw",
+              paddingLeft: "max(16px, 2vw)",
+              paddingRight: "max(16px, 10vw)",
             }}
           >
             {slides.map((s, i) => (
@@ -132,18 +132,14 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
                 ref={(el) => {
                   if (el) slideRefs.current[i] = el;
                 }}
-                className="flex-shrink-0 scroll-snap-center"
-                style={{
-                  width: "60vw",
-                  maxWidth: "800px",
-                }}
+                className="flex-shrink-0 scroll-snap-center w-[85vw] sm:w-[75vw] md:w-[60vw] max-w-[800px]"
                 tabIndex={0}
                 role="group"
                 aria-roledescription="slide"
                 aria-label={`${i + 1} of ${slides.length}`}
                 onClick={() => goTo(i)}
               >
-                <div className="relative rounded-3xl overflow-hidden shadow-xl h-[240px] md:h-[400px] group cursor-pointer">
+                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl h-[200px] sm:h-[280px] md:h-[400px] group cursor-pointer">
                   <Image
                     src={s.image || "/images/placeholder.png"}
                     alt={s.title ?? `slide-${i}`}
@@ -155,28 +151,28 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
 
                   <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
 
-                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="absolute inset-0 flex items-center justify-center mb-8 md:mb-0 z-10">
                     {s.title && (
-                      <h3 className="text-white text-xl md:text-4xl lg:text-7xl font-extrabold mb-2 drop-shadow-lg text-center">
+                      <h3 className="text-white text-xl sm:text-3xl md:text-4xl lg:text-7xl font-extrabold drop-shadow-lg text-center px-4">
                         {s.title}
                       </h3>
                     )}
                   </div>
 
                   {(s.subtitle || s.ctaText) && (
-                    <div className="absolute left-6 right-6 bottom-4 md:left-8 md:right-8 md:bottom-8 z-10">
+                    <div className="absolute left-4 right-4 bottom-3 sm:left-6 sm:right-6 sm:bottom-4 md:left-8 md:right-8 md:bottom-8 z-10">
                       {s.subtitle && (
-                        <p className="text-white/90 text-sm md:text-lg font-semibold leading-relaxed drop-shadow-md">
+                        <p className="text-white/90 text-xs sm:text-sm md:text-lg font-semibold leading-relaxed drop-shadow-md">
                           {s.subtitle}
                         </p>
                       )}
 
                       {s.ctaText && (
                         <div className="flex items-start justify-between w-full mt-2">
-                          <h6 className="text-white text-xs font-medium leading-tight drop-shadow-md my-2 w-[60%]">
+                          <h6 className="text-white text-[10px] sm:text-xs font-medium leading-tight drop-shadow-md my-1 sm:my-2 w-[60%]">
                             {s.description}
                           </h6>
-                          <span className="text-[10px] bg-white px-6 py-2 text-black rounded-full cursor-pointer font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+                          <span className="text-[10px] sm:text-xs bg-white px-4 sm:px-6 py-2 sm:py-3 text-black rounded-full cursor-pointer font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                             {s.ctaText}
                           </span>
                         </div>
@@ -189,9 +185,8 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
           </div>
         </div>
 
-        {/* Prev / Next Buttons - vertically centered outside the card */}
         <div className="absolute inset-x-0 bottom-1 pointer-events-none z-20">
-          <div className="flex items-center justify-end w-full px-2 md:px-6 pointer-events-auto gap-1">
+          <div className="flex items-center justify-end w-full px-2 sm:px-4 md:px-6 pointer-events-auto gap-1 sm:gap-2">
             <button
               onClick={prev}
               className="bg-gray-200 hover:bg-white p-1 cursor-pointer rounded-full shadow-lg transition-all duration-200 hover:shadow-xl hover:scale-110"
@@ -226,13 +221,12 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
           </div>
         </div>
 
-        {/* Pagination dots below the slider */}
         <div className="flex justify-center mt-2 gap-3">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => goTo(i)}
-              className={`w-2 h-2 rounded-full transition-all duration-200 border ${
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-200 border ${
                 i === active
                   ? "bg-gray-800 border-gray-800 scale-110"
                   : "bg-gray-400 border-gray-400 hover:bg-gray-600 hover:border-gray-600"

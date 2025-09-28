@@ -9,7 +9,8 @@ export default function Home() {
     <main className="w-full">
       <Header />
       <HeroClientWrapper />
-      <Generate />
+      <Generate title="Generate" />
+      <Generate title="Gallery" />
       <Footer />
     </main>
   );

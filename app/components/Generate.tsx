@@ -5,13 +5,17 @@ import { IoIosArrowDown } from "react-icons/io";
 import { generateData } from "../data/generate";
 import Card from "./Card";
 
-const Generate = () => {
+type GenerateProps = {
+  title: string;
+};
+
+const Generate = ({ title }: GenerateProps) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="px-6 py-4 w-full">
-      <div className="flex items-center justify-between w-full mb-4">
-        <h1 className="font-semibold">Generate</h1>
+    <div className="px-6 w-full mt-10">
+      <div className="flex items-center justify-between w-full mb-2">
+        <h1 className="font-semibold">{title}</h1>
         <div
           className="flex items-center flex-row space-x-2 text-sm text-blue-600 cursor-pointer hover:underline"
           onClick={() => setOpen(!open)}
