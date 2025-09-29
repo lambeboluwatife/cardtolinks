@@ -78,7 +78,6 @@ const Header = () => {
             <MdCircleNotifications size={20} />
           </div>
           <div className="p-2 rounded-xl bg-gray-100 cursor-pointer">
-            {/* <MdWbSunny size={20} /> */}
             <ThemeToggle />
           </div>
           <div className="rounded-full h-6 w-6 md:h-7 md:w-7 bg-gradient-to-br from-purple-500 via-blue-500 to-white"></div>
