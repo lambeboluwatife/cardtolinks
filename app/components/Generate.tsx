@@ -16,6 +16,9 @@ const Generate = ({ title }: GenerateProps) => {
     <div className="px-6 w-full mt-10">
       <div className="flex items-center justify-between w-full mb-2">
         <h1 className="font-semibold">{title}</h1>
+        <div className="bg-red-500 dark:bg-blue-500 text-white p-4">
+          Test div - should be RED in light mode, BLUE in dark mode
+        </div>
         <div
           className="flex items-center flex-row space-x-2 text-sm text-blue-600 cursor-pointer hover:underline"
           onClick={() => setOpen(!open)}
