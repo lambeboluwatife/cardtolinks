@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/data/generate.js"
+    "app/data/generate.ts"
   ],
   "exclude": ["node_modules"]
 }

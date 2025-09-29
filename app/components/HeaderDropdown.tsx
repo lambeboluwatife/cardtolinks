@@ -14,7 +14,7 @@ const HeaderDropdown = () => {
         <div className="rounded-full h-6 w-6 md:h-7 md:w-7 bg-gradient-to-br from-purple-500 via-blue-500 to-white"></div>
         <h6 className="mx-2 text-sm text-gray-700">lambeboluwatife</h6>
         <IoIosArrowDown
-          className={`transition-transform duration-200 ${
+          className={`transition-transform duration-200 text-[--color-foreground] ${
             open ? "rotate-180" : ""
           }`}
         />

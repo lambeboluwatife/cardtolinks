@@ -13,7 +13,7 @@ const Card = ({ item }: { item: CardItem }) => (
     </div>
     <div className="flex flex-col items-start gap-0.5">
       <div className="flex items-center gap-2 flex-row">
-        <h2 className="font-semibold text-sm text-[--color-foreground]">
+        <h2 className="font-semibold text-sm text-[--color-foreground] hover:text-[--color-background]">
           {item.title}
         </h2>
         {item.new && (

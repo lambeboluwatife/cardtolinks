@@ -20,26 +20,23 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-14 h-8 flex items-center bg-gray-200 dark:bg-gray-700 rounded-full p-1 transition-colors duration-300 cursor-pointer"
+      className="relative rounded-lg transition-all duration-300 overflow-hidden cursor-pointer"
+      aria-label="Toggle theme"
     >
-      <span
-        className={`absolute w-6 h-6 bg-white dark:bg-black rounded-full shadow-md transform transition-transform duration-300 ${
-          current === "light" ? "translate-x-0" : "translate-x-6"
+      <Sun
+        className={`w-5 h-5 transition-all duration-300 ${
+          current === "light"
+            ? "rotate-0 scale-100 opacity-100"
+            : "rotate-90 scale-0 opacity-0"
         }`}
       />
-      {current === "light" ? (
-        <Sun
-          className={`absolute left-1 w-5 h-5 text-yellow-500 transition-opacity duration-300 ${
-            current === "light" ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ) : (
-        <Moon
-          className={`absolute right-1 w-5 h-5 text-blue-300 transition-opacity duration-300 ${
-            current === "dark" ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      )}
+      <Moon
+        className={`absolute inset-0 m-auto w-5 h-5 transition-all duration-300 ${
+          current === "dark"
+            ? "rotate-0 scale-100 opacity-100"
+            : "-rotate-90 scale-0 opacity-0"
+        }`}
+      />
     </button>
   );
 }

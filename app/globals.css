@@ -3,12 +3,14 @@
 @theme {
   --color-background: #ffffff;
   --color-foreground: #000000;
+  --color-secondary: gray-50;
 }
 
 @media (prefers-color-scheme: dark) {
   @theme {
     --color-background: #000000;
     --color-foreground: #ffffff;
+    --color-secondary: gray-900;
   }
 }
 
@@ -16,6 +18,7 @@
   @theme {
     --color-background: #000000;
     --color-foreground: #ffffff;
+    --color-secondary: gray-900;
   }
 }
 
