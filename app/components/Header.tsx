@@ -10,10 +10,11 @@ import { BiSupport } from "react-icons/bi";
 import { MdCircleNotifications, MdWbSunny, MdFolder } from "react-icons/md";
 
 import HeaderDropdown from "./HeaderDropdown";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
-    <header className="px-2 md:px-4 lg:px-6 py-1 md:py-2 flex items-center justify-between bg-white text-black">
+    <header className="px-2 md:px-4 lg:px-6 py-1 md:py-2 flex items-center justify-between bg-white dark:bg-[#000] text-black transition-colors duration-200">
       <div className="flex items-center space-x-2">
         <Image
           src="/image/krea white.png"
@@ -64,21 +65,23 @@ const Header = () => {
       </div>
 
       <div className="flex flex-row items-center text-sm space-x-2 md:space-x-4">
-        <div className="hidden md:flex flex-row items-center space-x-1 p-2 rounded-xl hover:bg-gray-100 cursor-pointer">
+        <div className="hidden md:flex flex-row items-center space-x-1 p-2 rounded-xl bg-gray-100 cursor-pointer">
           <BsImages size={20} />
           <h6>Gallery</h6>
         </div>
-        <div className="hidden md:flex flex-row items-center space-x-1 p-2 rounded-xl hover:bg-gray-100 cursor-pointer">
+        <div className="hidden md:flex flex-row items-center space-x-1 p-2 rounded-xl bg-gray-100 cursor-pointer">
           <BiSupport size={20} />
           <h6>Support</h6>
         </div>
         <div className="flex flex-row items-center space-x-2">
-          <MdCircleNotifications
-            size={20}
-            className="hidden md:block hover:bg-gray-100 cursor-pointer"
-          />
-          <MdWbSunny size={20} className="hover:bg-gray-100 cursor-pointer" />
-          <div className="rounded-full bg-black h-6 w-6 md:h-7 md:w-7"></div>
+          <div className="p-2 rounded-xl bg-gray-100 cursor-pointer hidden md:block">
+            <MdCircleNotifications size={20} />
+          </div>
+          <div className="p-2 rounded-xl bg-gray-100 cursor-pointer">
+            {/* <MdWbSunny size={20} /> */}
+            <ThemeToggle />
+          </div>
+          <div className="rounded-full h-6 w-6 md:h-7 md:w-7 bg-gradient-to-br from-purple-500 via-blue-500 to-white"></div>
         </div>
       </div>
     </header>

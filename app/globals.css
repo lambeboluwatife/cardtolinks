@@ -2,38 +2,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #0a0a0a;
-    --background: #ffffff;
-  }
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.swiper-container {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.swiper-wrapper {
-  margin: 0 !important;
-}
-
-.swiper-slide {
-  margin: 0 !important;
+/* Prevent Tailwind's preflight from overriding border utilities */
+*,
+::before,
+::after {
+  border-style: solid; /* ensures borders always render */
+  border-color: inherit; /* prevent reset overriding Tailwind colors */
 }
