@@ -27,16 +27,19 @@ export default function ThemeToggle() {
           current === "light" ? "translate-x-0" : "translate-x-6"
         }`}
       />
-      <Sun
-        className={`absolute left-1 w-5 h-5 text-yellow-500 transition-opacity duration-300 ${
-          current === "light" ? "opacity-100" : "opacity-0"
-        }`}
-      />
-      <Moon
-        className={`absolute right-1 w-5 h-5 text-blue-300 transition-opacity duration-300 ${
-          current === "dark" ? "opacity-100" : "opacity-0"
-        }`}
-      />
+      {current === "light" ? (
+        <Sun
+          className={`absolute left-1 w-5 h-5 text-yellow-500 transition-opacity duration-300 ${
+            current === "light" ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ) : (
+        <Moon
+          className={`absolute right-1 w-5 h-5 text-blue-300 transition-opacity duration-300 ${
+            current === "dark" ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      )}
     </button>
   );
 }

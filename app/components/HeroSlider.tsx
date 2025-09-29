@@ -139,7 +139,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
                 aria-label={`${i + 1} of ${slides.length}`}
                 onClick={() => goTo(i)}
               >
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-[200px] sm:h-[280px] md:h-[400px] group cursor-pointer dark:border dark:border-gray-800">
+                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-[200px] sm:h-[280px] md:h-[400px] group cursor-pointer border-transparent dark:border dark:border-gray-800">
                   <Image
                     src={s.image || "/images/placeholder.png"}
                     alt={s.title ?? `slide-${i}`}
