@@ -11,7 +11,7 @@ const HeaderDropdown = () => {
         className="flex flex-row items-center justify-between cursor-pointer p-2 rounded-lg"
         onClick={() => setOpen(!open)}
       >
-        <div className="rounded-full bg-black h-7 w-7"></div>
+        <div className="rounded-full h-6 w-6 md:h-7 md:w-7 bg-gradient-to-br from-purple-500 via-blue-500 to-white"></div>
         <h6 className="mx-2 text-sm text-gray-700">lambeboluwatife</h6>
         <IoIosArrowDown
           className={`transition-transform duration-200 ${
