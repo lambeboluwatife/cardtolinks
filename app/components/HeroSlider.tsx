@@ -104,7 +104,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
   if (!slides || slides.length === 0) return null;
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-14">
       <div
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -139,7 +139,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
                 aria-label={`${i + 1} of ${slides.length}`}
                 onClick={() => goTo(i)}
               >
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-[200px] sm:h-[280px] md:h-[400px] group cursor-pointer border-transparent dark:border dark:border-gray-800">
+                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-[200px] sm:h-[280px] md:h-[400px] group cursor-pointer border-transparent">
                   <Image
                     src={s.image || "/images/placeholder.png"}
                     alt={s.title ?? `slide-${i}`}
@@ -226,10 +226,8 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
             <button
               key={i}
               onClick={() => goTo(i)}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-200 border ${
-                i === active
-                  ? "bg-gray-800 border-gray-800 scale-110"
-                  : "bg-gray-400 border-gray-400 hover:bg-gray-600 hover:border-gray-600"
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${
+                i === active ? "bg-gray-800  scale-110" : "bg-gray-400 "
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />

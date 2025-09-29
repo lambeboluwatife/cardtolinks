@@ -14,7 +14,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
-    <header className="px-2 md:px-4 lg:px-6 py-1 md:py-2 flex items-center justify-between bg-white dark:bg-[#000] text-black transition-colors duration-200">
+    <header className="px-2 md:px-4 lg:px-6 py-1 md:py-2 flex items-center justify-between bg-[--color-background] text-black transition-colors duration-200">
       <div className="flex items-center space-x-2">
         <Image
           src="/image/krea white.png"
