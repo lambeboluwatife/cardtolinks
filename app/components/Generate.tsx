@@ -5,30 +5,23 @@ import { IoIosArrowDown } from "react-icons/io";
 import { generateData } from "../data/generate";
 import Card from "./Card";
 
-type GenerateProps = {
-  title: string;
-};
-
-const Generate = ({ title }: GenerateProps) => {
+const Generate = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="px-6 w-full mt-10">
       <div className="flex items-center justify-between w-full mb-2">
-        <h1 className="font-semibold">{title}</h1>
-        <div className="bg-red-500 dark:bg-blue-500 text-white p-4">
-          Test div - should be RED in light mode, BLUE in dark mode
-        </div>
+        <h1 className="font-semibold">Generate</h1>
         <div
-          className="flex items-center flex-row space-x-2 text-sm text-blue-600 cursor-pointer hover:underline"
+          className="flex items-center flex-row space-x-1 text-sm text-blue-600 cursor-pointer hover:underline"
           onClick={() => setOpen(!open)}
         >
-          <h6>Show all</h6>
           <IoIosArrowDown
             className={`transition-transform duration-200 ${
               open ? "rotate-180" : ""
             }`}
           />
+          <h6>Show all</h6>
         </div>
       </div>
       <div className="my-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

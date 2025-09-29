@@ -13,7 +13,9 @@ const Card = ({ item }: { item: CardItem }) => (
     </div>
     <div className="flex flex-col items-start gap-0.5">
       <div className="flex items-center gap-2 flex-row">
-        <h2 className="font-semibold text-sm text-black dark:text-white">{item.title}</h2>
+        <h2 className="font-semibold text-sm text-[--color-foreground]">
+          {item.title}
+        </h2>
         {item.new && (
           <span className="text-[10px] text-blue-100 bg-blue-600 px-2 rounded-md">
             New
@@ -24,7 +26,7 @@ const Card = ({ item }: { item: CardItem }) => (
         <p className="text-[10px] text-gray-600 dark:text-gray-400 leading-3">
           {item.description}
         </p>
-        <span className="text-[10px] bg-gray-200 dark:bg-gray-700 text-black dark:text-white px-3 py-1 rounded-xl cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+        <span className="text-[10px] bg-gray-100  text-black px-3 py-1 rounded-xl cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 transition">
           Open
         </span>
       </div>
