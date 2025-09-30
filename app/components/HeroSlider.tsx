@@ -28,10 +28,17 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
       const idx = (index + slides.length) % slides.length;
       const el = slideRefs.current[idx];
       if (el && containerRef.current) {
-        el.scrollIntoView({
+        const container = containerRef.current;
+        const slideRect = el.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const scrollLeft =
+          container.scrollLeft +
+          (slideRect.left - containerRect.left) -
+          (containerRect.width - slideRect.width) / 2;
+
+        container.scrollTo({
+          left: scrollLeft,
           behavior: "smooth",
-          inline: "center",
-          block: "nearest",
         });
         setActive(idx);
       }
